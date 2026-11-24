@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Majid - Curriculum Vitae</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .cv-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 45px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .header {
+      border-bottom: 2px solid #8b5cf6;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #7c3aed;
+      margin-top: 4px;
+    }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 25px;
+      margin-top: 15px;
+      font-size: 13.5px;
+      color: #475569;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .summary-text {
+      font-size: 14px;
+      color: #334155;
+      text-align: justify;
+    }
+    .item {
+      margin-bottom: 14px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .item-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .item-date {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .item-sub {
+      font-size: 14px;
+      color: #7c3aed;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .item-desc {
+      font-size: 13.5px;
+      color: #475569;
+      padding-left: 18px;
+    }
+    .item-desc li {
+      margin-bottom: 4px;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      background: #f3e8ff;
+      color: #6b21a8;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .badge-editable {
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      font-weight: normal;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .cv-container { box-shadow: none; border: none; padding: 20px; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <header class="header">
+      <h1 class="name">Maria Majid</h1>
+      <div class="title">Aspiring Web Developer &amp; Computer Science Student</div>
+      <div class="contact-grid">
+        <div class="contact-item">📍 Rawalpindi, Pakistan</div>
+        <div class="contact-item">✉️ mariamajid786mani@gmail.com</div>
+        <div class="contact-item">🇵🇰 Pakistani</div>
+        <div class="contact-item">📞 Contact upon verification</div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        I am a Computer Science student with an interest in technology, web development, and creative digital work. I am hardworking, eager to learn, and always looking for opportunities to improve my knowledge and skills. My journey started with learning basic computer skills and exploring different areas of IT. I have developed knowledge of Microsoft Word, PowerPoint, Excel, document formatting, CV designing, and web development. I am continuously learning and practicing to build my professional experience.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">Bachelor's Degree in Computer Science</div>
+          <div class="item-date">Expected Graduation: 2029</div>
+        </div>
+        <div class="item-sub">National Excellence Institute</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">Teaching Experience <span class="badge-editable">Editable Section</span></div>
+          <div class="item-date">2 Years Duration</div>
+        </div>
+        <div class="item-sub">[Institute Name – To be specified by applicant]</div>
+        <ul class="item-desc">
+          <li>[Delivered computer literacy and academic instruction to students]</li>
+          <li>[Assisted learners with practical software exercises and coursework]</li>
+          <li>[Key responsibilities and achievements to be updated with personal details]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Core Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-tag">Web Development</span>
+        <span class="skill-tag">Python Programming</span>
+        <span class="skill-tag">Microsoft Word</span>
+        <span class="skill-tag">Microsoft Excel</span>
+        <span class="skill-tag">Microsoft PowerPoint</span>
+        <span class="skill-tag">Document Formatting</span>
+        <span class="skill-tag">CV Designing</span>
+        <span class="skill-tag">Antigravity</span>
+        <span class="skill-tag">Visual Studio</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Projects (In Development / Academic)</h2>
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">Hospital Management System</div>
+          <div class="item-date">[In Development]</div>
+        </div>
+        <div class="item-sub">Healthcare Administration System</div>
+        <ul class="item-desc">
+          <li>[Hospital management portal for records, scheduling, and clinic management. Scope and stack to be specified.]</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">E-commerce Website</div>
+          <div class="item-date">[In Development]</div>
+        </div>
+        <div class="item-sub">Online Retail &amp; Storefront Prototype</div>
+        <ul class="item-desc">
+          <li>[Modern shopping website design featuring product catalog, cart interface, and responsive layout. Stack to be specified.]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Courses &amp; Certifications</h2>
+      <ul class="item-desc" style="padding-left: 20px;">
+        <li><strong>MS Office</strong></li>
+        <li><strong>Python Programming Language</strong></li>
+        <li><strong>Spoken English</strong></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

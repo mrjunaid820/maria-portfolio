@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Maria Majid Portfolio</title>
+  <meta name="description" content="The page you are looking for could not be found. Return to Maria Majid's personal portfolio.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Instant Theme Detection Script -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('maria_majid_portfolio_theme');
+        var theme = savedTheme;
+        if (!theme) {
+          theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .error-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(6.5rem, 16vw, 11.5rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #FFFFFF 15%, var(--accent-lavender) 55%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.05em;
+      filter: drop-shadow(0 0 45px rgba(168, 85, 247, 0.45));
+    }
+    .error-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-top: 1px solid var(--glass-border-top);
+      border-left: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-lg);
+      padding: 3.25rem 2.75rem;
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-shadow);
+      max-width: 560px;
+      width: 100%;
+    }
+    .error-title {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+    .error-text {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+    }
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Lighting Background -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="glass-grid-overlay"></div>
+  </div>
+
+  <div class="error-page-wrapper">
+    <div class="error-code">404</div>
+    <div class="error-card">
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-text">
+        The page you are attempting to access does not exist or has been moved. You can return to Maria Majid's portfolio homepage below.
+      </p>
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-glass-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Return to Homepage</span>
+        </a>
+        <a href="index.html#contact" class="btn btn-glass-secondary">
+          <span>Contact Maria</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

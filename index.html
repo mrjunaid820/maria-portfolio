@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Majid | Aspiring Web Developer &amp; Computer Science Student</title>
+  
+  <!-- SEO & Social Metadata -->
+  <meta name="description" content="Personal portfolio of Maria Majid, an aspiring Web Developer and Computer Science student from Rawalpindi, Pakistan. Explore education, verified skills, software tools, projects, and services.">
+  <meta name="keywords" content="Maria Majid, Aspiring Web Developer, Computer Science Student, Rawalpindi, Pakistan, National Excellence Institute, Portfolio">
+  <meta name="author" content="Maria Majid">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maria Majid | Aspiring Web Developer &amp; Computer Science Student">
+  <meta property="og:description" content="Passionate about technology, web development and creating meaningful digital experiences.">
+  <meta property="og:image" content="assets/images/avatar-placeholder.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Instant Theme Detection Script (Prevents FOUC) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('maria_majid_portfolio_theme');
+        var theme = savedTheme;
+        if (!theme) {
+          theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Core Dual-Theme Glassmorphism Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       DYNAMIC AMBIENT LIGHTING & DUAL-THEME MESH BACKGROUND
+       ========================================================================= -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="glass-grid-overlay"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+  </div>
+
+  <!-- =========================================================================
+       FLOATING GLASSMORPHISM NAVBAR & THEME SWITCHER
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#hero" class="brand-logo" aria-label="Maria Majid - Home">
+        <div class="brand-emblem">MM</div>
+        <div class="brand-text">
+          <span class="brand-name">Maria Majid</span>
+          <span class="brand-sub">Portfolio</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#tools" class="nav-link">Tools</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+        <!-- Mobile Drawer Theme Control -->
+        <div class="mobile-theme-control">
+          <div class="mobile-theme-header">
+            <span class="mobile-theme-title">Theme Experience</span>
+            <span class="mobile-theme-desc">Select visual identity</span>
+          </div>
+          <div class="theme-switcher mobile-theme-switcher" role="radiogroup" aria-label="Website Theme Mode Mobile">
+            <button type="button" class="theme-toggle-btn active" data-theme-target="dark" role="radio" aria-checked="true" aria-label="Dark Cyber theme" title="Dark Cyber (Blue Cyber Glass)">
+              <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <span class="theme-text">Dark Cyber</span>
+            </button>
+            <button type="button" class="theme-toggle-btn" data-theme-target="light" role="radio" aria-checked="false" aria-label="Light Crystal theme" title="Light Crystal (Crystal Light Glass)">
+              <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <span class="theme-text">Light Crystal</span>
+            </button>
+            <span class="theme-slider" aria-hidden="true"></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Action & Dual Theme Switcher in Header -->
+      <div class="nav-actions">
+        <!-- Desktop Theme Switcher -->
+        <div class="theme-switch-wrapper" id="themeSwitchWrapper">
+          <div class="theme-switcher" role="radiogroup" aria-label="Website Theme Mode">
+            <button type="button" class="theme-toggle-btn active" data-theme-target="dark" role="radio" aria-checked="true" aria-label="Dark Cyber theme" title="Dark Cyber (Blue Cyber Glass)">
+              <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <span class="theme-text">Dark Cyber</span>
+            </button>
+            <button type="button" class="theme-toggle-btn" data-theme-target="light" role="radio" aria-checked="false" aria-label="Light Crystal theme" title="Light Crystal (Crystal Light Glass)">
+              <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <span class="theme-text">Light Crystal</span>
+            </button>
+            <span class="theme-slider" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-outline-sm btn-nav-cta">Get in Touch</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         1. HERO SECTION
+         ======================================================================= -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text Content (Left Side) -->
+        <div class="hero-content fade-in-up">
+          <div class="hero-eyebrow">HELLO, I'M</div>
+
+          <h1 class="hero-name">
+            <span class="highlight">Maria Majid</span>
+          </h1>
+
+          <div class="hero-title-badge">
+            Aspiring Web Developer | Computer Science Student
+          </div>
+
+          <p class="hero-intro">
+            I am passionate about technology, web development and creating meaningful digital experiences. I enjoy learning new skills and turning ideas into practical solutions.
+          </p>
+
+          <!-- Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Explore My Work</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Contact Me</span>
+            </a>
+            <button class="btn btn-secondary" data-trigger-cv aria-label="Download Curriculum Vitae">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Download CV</span>
+            </button>
+          </div>
+
+          <!-- Quick Meta Details -->
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Rawalpindi, Pakistan</span>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              <span>Pakistani</span>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span>BS Computer Science (2029)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Visual (Right Side: Circular Glowing Frame & Floating Glass Cards) -->
+        <div class="hero-visual fade-in-up">
+          <div class="circular-glow-frame">
+            <div class="circular-glow-inner">
+              <img src="assets/images/avatar-placeholder.svg?v=2" alt="Maria Majid - Profile Portrait" class="profile-img" width="500" height="500">
+            </div>
+
+            <!-- Floating Glass Card 1 (Top Left) -->
+            <div class="floating-glass-chip chip-top-left">
+              <div class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="chip-text">
+                <span class="chip-title">Web Development</span>
+                <span class="chip-desc">Clean &amp; Responsive</span>
+              </div>
+            </div>
+
+            <!-- Floating Glass Card 2 (Bottom Right) -->
+            <div class="floating-glass-chip chip-bottom-right">
+              <div class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="chip-text">
+                <span class="chip-title">Computer Science</span>
+                <span class="chip-desc">NEI Undergrad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. ABOUT ME SECTION
+         ======================================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Introduction</span>
+          <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+          <p class="section-subtitle">Dedicated to professional growth, modern web practices, and practical problem solving.</p>
+        </div>
+
+        <div class="about-card fade-in-up">
+          <div class="about-grid">
+            <div class="about-text-content">
+              <!-- Exact Prompt Specified Text -->
+              <p class="about-body-text">
+                I am a Computer Science student at National Excellence Institute, passionate about technology, computer skills and web development. I started my journey by learning basic computer skills and gradually explored different areas of IT. I enjoy learning new technologies, improving my abilities and building creative digital projects. My goal is to grow professionally and gain practical experience in the technology industry.
+              </p>
+            </div>
+
+            <!-- Small Information Card -->
+            <div class="info-glass-card">
+              <div class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value">Rawalpindi, Pakistan</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Education</span>
+                <span class="info-value">BS Computer Science</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Institute</span>
+                <span class="info-value">National Excellence Institute</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Expected Graduation</span>
+                <span class="info-value">2029</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. EDUCATION SECTION
+         ======================================================================= -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Academic Timeline</span>
+          <h2 class="section-title">My <span class="text-gradient">Education</span></h2>
+          <p class="section-subtitle">Formal computer science education establishing core software foundations.</p>
+        </div>
+
+        <div class="education-container fade-in-up">
+          <div class="education-card">
+            <div class="edu-icon-badge">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            
+            <div class="edu-content">
+              <div class="edu-top">
+                <h3 class="edu-degree">Bachelor's Degree</h3>
+                <span class="edu-status-badge">Expected Graduation: 2029</span>
+              </div>
+              
+              <div class="edu-field">Field: Computer Science</div>
+              
+              <div class="edu-institute">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="9" y1="12" x2="9" y2="12.01"/><line x1="9" y1="15" x2="9" y2="15.01"/><line x1="9" y1="18" x2="9" y2="18.01"/></svg>
+                <span>Institute: National Excellence Institute</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SKILLS SECTION
+         (Modern glass cards with icons & subtle hover animations)
+         ======================================================================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+          <p class="section-subtitle">Verified skill categories representing real technical and office competencies without fabricated percentages.</p>
+        </div>
+
+        <div class="skills-grid fade-in-up">
+          <!-- Skill 1: MS Word -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="skill-card-name">MS Word</div>
+          </div>
+
+          <!-- Skill 2: MS PowerPoint -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="skill-card-name">MS PowerPoint</div>
+          </div>
+
+          <!-- Skill 3: MS Excel -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+            </div>
+            <div class="skill-card-name">MS Excel</div>
+          </div>
+
+          <!-- Skill 4: Document Formatting -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="3" y2="18"/></svg>
+            </div>
+            <div class="skill-card-name">Document Formatting</div>
+          </div>
+
+          <!-- Skill 5: Web Development -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="skill-card-name">Web Development</div>
+          </div>
+
+          <!-- Skill 6: CV Designing -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            </div>
+            <div class="skill-card-name">CV Designing</div>
+          </div>
+
+          <!-- Skill 7: Computer Skills -->
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="skill-card-name">Computer Skills</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. SOFTWARE & TOOLS SECTION (Separate Glowing Glass Cards)
+         ======================================================================= -->
+    <section class="section tools-section" id="tools">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Environment</span>
+          <h2 class="section-title">Software &amp; <span class="text-gradient">Tools</span></h2>
+          <p class="section-subtitle">Dedicated developer tooling and productivity suites utilized for coding and document engineering.</p>
+        </div>
+
+        <div class="tools-grid fade-in-up">
+          <!-- Tool 1: Antigravity -->
+          <div class="tool-glass-card">
+            <div class="tool-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="tool-name">Antigravity</h3>
+            <span class="tool-badge">Development Platform</span>
+          </div>
+
+          <!-- Tool 2: Visual Studio / VS Code -->
+          <div class="tool-glass-card">
+            <div class="tool-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="tool-name">Visual Studio / VS Code</h3>
+            <span class="tool-badge">(confirm exact edition before publishing)</span>
+          </div>
+
+          <!-- Tool 3: Microsoft Office -->
+          <div class="tool-glass-card">
+            <div class="tool-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="tool-name">Microsoft Office</h3>
+            <span class="tool-badge">Productivity Suite</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. WORK EXPERIENCE SECTION
+         ======================================================================= -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">History</span>
+          <h2 class="section-title">Work <span class="text-gradient">Experience</span></h2>
+          <p class="section-subtitle">Practical instructional background contributing to technical communication and mentorship.</p>
+        </div>
+
+        <div class="experience-container fade-in-up">
+          <div class="experience-card">
+            <div class="exp-badge-row">
+              <span class="exp-duration-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Duration: 2 Years
+              </span>
+              <span class="exp-duration-pill" style="border-color: var(--badge-border);">
+                Role: Teaching
+              </span>
+            </div>
+
+            <h3 class="exp-role-title">Teaching Experience</h3>
+            <div class="exp-role-sub">Role: Teaching &bull; 2 Years</div>
+
+            <!-- Editable Placeholder Notice -->
+            <div class="exp-details-placeholder">
+              <strong>[Institute Name, Responsibilities &amp; Achievements – Editable Placeholder]</strong><br>
+              In accordance with instructions, specific institution names, daily duties, and accomplishments remain uninvented and fully editable inside <code>index.html</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. PROJECTS SECTION
+         (Hospital Management System & E-commerce Website)
+         ======================================================================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">Real-world system prototypes demonstrating database concepts and responsive web architecture.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Hospital Management System -->
+          <article class="project-card fade-in-up">
+            <div class="project-visual">
+              <img src="assets/images/project-hospital.svg?v=2" alt="Hospital Management System - Project Preview Mockup" class="project-img" width="600" height="360" loading="lazy">
+              <span class="project-status-tag">In Development</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Hospital Management System</h3>
+              
+              <!-- Description Placeholder -->
+              <p class="project-desc-placeholder">
+                [Short project description placeholder: A system concept designed for patient record management, appointment workflows, and clinic coordination. Comprehensive features are being finalized.]
+              </p>
+
+              <!-- Technology Stack Placeholder -->
+              <div class="project-tech-stack">
+                <span class="tech-label">Technology Stack:</span>
+                <div class="tech-tags">
+                  <span class="tech-tag">[Technology Stack to be confirmed]</span>
+                  <span class="tech-tag">Academic Prototype</span>
+                </div>
+              </div>
+
+              <!-- Button only when real link provided (opens in-development details modal) -->
+              <div class="project-footer">
+                <button class="btn btn-secondary" data-project-id="hospital-management" aria-label="View details for Hospital Management System">
+                  <span>View Project Details</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: E-commerce Website -->
+          <article class="project-card fade-in-up">
+            <div class="project-visual">
+              <img src="assets/images/project-ecommerce.svg?v=2" alt="E-commerce Website - Project Preview Mockup" class="project-img" width="600" height="360" loading="lazy">
+              <span class="project-status-tag">In Development</span>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">E-commerce Website</h3>
+              
+              <!-- Description Placeholder -->
+              <p class="project-desc-placeholder">
+                [Short project description placeholder: A modern online storefront prototype focusing on responsive product browsing, shopping cart interfaces, and clean checkout presentation.]
+              </p>
+
+              <!-- Technology Stack Placeholder -->
+              <div class="project-tech-stack">
+                <span class="tech-label">Technology Stack:</span>
+                <div class="tech-tags">
+                  <span class="tech-tag">[Technology Stack to be confirmed]</span>
+                  <span class="tech-tag">Web Prototype</span>
+                </div>
+              </div>
+
+              <!-- Button only when real link provided (opens in-development details modal) -->
+              <div class="project-footer">
+                <button class="btn btn-secondary" data-project-id="ecommerce-website" aria-label="View details for E-commerce Website">
+                  <span>View Project Details</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. COURSES & CERTIFICATES SECTION
+         ======================================================================= -->
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Learning</span>
+          <h2 class="section-title">Courses &amp; <span class="text-gradient">Certificates</span></h2>
+          <p class="section-subtitle">Structured vocational coursework and training completed to build core technical and language abilities.</p>
+        </div>
+
+        <div class="certifications-grid fade-in-up">
+          <!-- Course 1: MS Office -->
+          <div class="cert-glass-card">
+            <div class="cert-icon-wrapper">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="cert-title">MS Office</h3>
+            <span class="cert-badge">Coursework Completed</span>
+          </div>
+
+          <!-- Course 2: Python Programming Language -->
+          <div class="cert-glass-card">
+            <div class="cert-icon-wrapper">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+            </div>
+            <h3 class="cert-title">Python Programming Language</h3>
+            <span class="cert-badge">Coursework Completed</span>
+          </div>
+
+          <!-- Course 3: Spoken English -->
+          <div class="cert-glass-card">
+            <div class="cert-icon-wrapper">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="cert-title">Spoken English</h3>
+            <span class="cert-badge">Language Proficiency</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. SERVICES SECTION (Web Development & MS Office Services)
+         ======================================================================= -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Offerings</span>
+          <h2 class="section-title">Professional <span class="text-gradient">Services</span></h2>
+          <p class="section-subtitle">Focused technical and document creation services tailored to professional and academic needs.</p>
+        </div>
+
+        <div class="services-grid fade-in-up">
+          <!-- Service 1: Web Development -->
+          <div class="service-glass-card">
+            <div class="service-icon-box">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">
+              Building responsive, accessible and clean web pages with modern HTML, CSS and JavaScript, structured for multi-device browsing and optimal performance.
+            </p>
+          </div>
+
+          <!-- Service 2: MS Office Services -->
+          <div class="service-glass-card">
+            <div class="service-icon-box">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="service-title">MS Office Services</h3>
+            <p class="service-desc">
+              Expert document formatting in Word, spreadsheet formula setup in Excel, and professional presentation deck creation in PowerPoint.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. CONTACT SECTION
+         ======================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact <span class="text-gradient">Maria Majid</span></h2>
+          <p class="section-subtitle">Interested in discussing employment opportunities, internships or digital projects? Send a message below.</p>
+        </div>
+
+        <div class="contact-grid fade-in-up">
+          <!-- Left: Contact Details Panel -->
+          <div class="contact-info-panel">
+            <!-- Email Card -->
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Email Address</div>
+                <a href="mailto:mariamajid786mani@gmail.com" class="contact-value">mariamajid786mani@gmail.com</a>
+                <button class="copy-email-btn" type="button" aria-label="Copy Email Address">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Phone &amp; WhatsApp</div>
+                <a href="tel:03242903998" class="contact-value">03242903998</a>
+                <a href="https://wa.me/923242903998" target="_blank" rel="noopener noreferrer" class="copy-email-btn" style="text-decoration:none;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-details">
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Rawalpindi, Pakistan</div>
+                <span class="info-label" style="margin-top:0.35rem; display:block;">Open to entry-level &amp; remote roles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Functional Glass Contact Form -->
+          <div class="contact-form-wrapper">
+            <div class="form-header">
+              <h3 class="form-title">Send a Message</h3>
+              <p class="form-subtitle">Fill in the fields below. Messages are validated and prepared for direct delivery.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <!-- Netlify hidden inputs -->
+              <input type="hidden" name="form-name" value="contact">
+              <p style="display: none;" aria-hidden="true">
+                <label>Do not fill: <input name="bot-field"></label>
+              </p>
+
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required autocomplete="name">
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required autocomplete="email">
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Hello Maria, I would like to discuss..." required></textarea>
+              </div>
+
+              <!-- Status Banner -->
+              <div class="form-status" id="formStatus" role="alert"></div>
+
+              <!-- Send Button -->
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo" aria-label="Maria Majid - Home">
+            <div class="brand-emblem">MM</div>
+            <div class="brand-text">
+              <span class="brand-name">Maria Majid</span>
+              <span class="brand-sub">Aspiring Web Developer</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Computer Science student and aspiring web developer dedicated to continuous learning, building responsive web solutions, and professional IT excellence.
+          </p>
+        </div>
+
+        <!-- Quick Navigation Links -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="#hero" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About Me</a>
+            <a href="#education" class="footer-link">Education</a>
+            <a href="#skills" class="footer-link">Skills</a>
+            <a href="#tools" class="footer-link">Software &amp; Tools</a>
+          </div>
+        </div>
+
+        <!-- Contact & Portfolio Info -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Contact &amp; Work</h4>
+          <div class="footer-links">
+            <a href="#experience" class="footer-link">Experience</a>
+            <a href="#projects" class="footer-link">Projects</a>
+            <a href="#services" class="footer-link">Services</a>
+            <a href="mailto:mariamajid786mani@gmail.com" class="footer-link">mariamajid786mani@gmail.com</a>
+            <a href="tel:03242903998" class="footer-link">03242903998</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Maria Majid. All rights reserved. Rawalpindi, Pakistan.
+        </div>
+        <button class="back-to-top-btn" id="backToTopBtn" type="button" aria-label="Back to Top">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       GLOBAL MODAL DIALOG
+       ========================================================================= -->
+  <div class="modal-backdrop" id="globalModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toastMessage">Notification message</span>
+  </div>
+
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

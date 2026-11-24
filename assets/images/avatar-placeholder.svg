@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2044" />
+      <stop offset="50%" stop-color="#0A1630" />
+      <stop offset="100%" stop-color="#050B1A" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#22D3EE" />
+    </linearGradient>
+    <radialGradient id="auraGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#3B82F6" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#050B1A" stop-opacity="0" />
+    </radialGradient>
+    <!-- Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="500" height="500" rx="40" fill="url(#bgGrad)" />
+  
+  <!-- Ambient Aura -->
+  <circle cx="250" cy="220" r="190" fill="url(#auraGlow)" />
+
+  <!-- Subtle Tech Grid / Orbits -->
+  <circle cx="250" cy="230" r="160" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.35" />
+  <circle cx="250" cy="230" r="185" fill="none" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="3 12" opacity="0.25" />
+
+  <!-- Orbiting Nodes -->
+  <circle cx="130" cy="140" r="5" fill="#22D3EE" opacity="0.85" filter="url(#softGlow)" />
+  <circle cx="380" cy="280" r="6" fill="#3B82F6" opacity="0.75" filter="url(#softGlow)" />
+  <circle cx="160" cy="350" r="4" fill="#67E8F9" opacity="0.6" />
+
+  <!-- Stylized Professional Silhouette -->
+  <!-- Base Torso / Blazer Outline -->
+  <path d="M140 460 C140 370 170 330 215 315 L230 350 L250 365 L270 350 L285 315 C330 330 360 370 360 460 Z" 
+        fill="#0A1630" stroke="url(#primaryGrad)" stroke-width="2" />
+        
+  <!-- Inner shirt collar -->
+  <polygon points="230,350 250,400 270,350 250,365" fill="#0F2044" stroke="#22D3EE" stroke-width="1" />
+  
+  <!-- Neck -->
+  <path d="M230 260 L230 325 C230 335 270 335 270 325 L270 260 Z" fill="#0D1B3A" />
+
+  <!-- Head Base -->
+  <ellipse cx="250" cy="215" rx="55" ry="68" fill="#10234B" stroke="url(#primaryGrad)" stroke-width="1.5" />
+  
+  <!-- Stylized Professional Hair Silhouette -->
+  <path d="M190 220 C185 140 220 120 250 120 C280 120 315 140 310 220 C310 260 295 280 295 280 C295 280 288 230 285 210 C280 170 265 155 250 155 C235 155 220 170 215 210 C212 230 205 280 205 280 C205 280 190 260 190 220 Z" 
+        fill="#060E1E" stroke="#22D3EE" stroke-width="1" />
+
+  <!-- Tech Monogram Emblem Badge at Center Chest -->
+  <g transform="translate(225, 415)">
+    <rect width="50" height="24" rx="12" fill="#050B1A" stroke="url(#primaryGrad)" stroke-width="1.5" />
+    <text x="25" y="16" fill="#A5F3FC" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" text-anchor="middle" letter-spacing="1.5">DEV</text>
+  </g>
+
+  <!-- Professional Badge / Camera Overlay -->
+  <g transform="translate(350, 400)">
+    <circle cx="25" cy="25" r="28" fill="#0A1630" stroke="#22D3EE" stroke-width="2" filter="url(#softGlow)" />
+    <!-- Camera/Upload Icon to indicate replacement -->
+    <path d="M17 21 L20 17 L30 17 L33 21 L37 21 C38.1 21 39 21.9 39 23 L39 33 C39 34.1 38.1 35 37 35 L13 35 C11.9 35 11 34.1 11 33 L11 23 C11 21.9 11.9 21 13 21 L17 21 Z" 
+          fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="25" cy="28" r="4.5" fill="none" stroke="#22D3EE" stroke-width="2"/>
+  </g>
+
+  <!-- Elegant Status Tag -->
+  <g transform="translate(50, 50)">
+    <rect width="170" height="34" rx="17" fill="rgba(10, 22, 48, 0.88)" stroke="rgba(34, 211, 238, 0.4)" stroke-width="1" />
+    <circle cx="68" cy="67" r="4" fill="#22C55E" />
+    <circle cx="68" cy="67" r="8" fill="none" stroke="#22C55E" stroke-width="1" opacity="0.5" />
+    <text x="82" y="71" fill="#E2E8F0" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12">Aspiring Web Dev</text>
+  </g>
+</svg>

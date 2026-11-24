@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradHosp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1630" />
+      <stop offset="100%" stop-color="#050B1A" />
+    </linearGradient>
+    <linearGradient id="cyberAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2044" />
+      <stop offset="100%" stop-color="#0A1630" />
+    </linearGradient>
+    <filter id="cyberGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="600" height="360" rx="16" fill="url(#bgGradHosp)"/>
+  <rect width="598" height="358" x="1" y="1" rx="15" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.3"/>
+
+  <!-- Top Browser / App Window Bar -->
+  <path d="M0 16 C0 7.16 7.16 0 16 0 L584 0 C592.84 0 600 7.16 600 16 L600 44 L0 44 Z" fill="#0E1D3D" />
+  <circle cx="24" cy="22" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="40" cy="22" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="56" cy="22" r="5" fill="#10B981" opacity="0.8"/>
+  
+  <!-- Window Title URL Pill -->
+  <rect x="180" y="12" width="240" height="20" rx="10" fill="#050B1A" stroke="#22D3EE" stroke-width="1" opacity="0.4"/>
+  <text x="300" y="26" fill="#22D3EE" font-family="'Plus Jakarta Sans', monospace, sans-serif" font-size="10" text-anchor="middle">hms.system.portal/dashboard</text>
+
+  <!-- Left Sidebar Nav -->
+  <rect x="20" y="60" width="130" height="280" rx="10" fill="url(#cardGrad)" stroke="#22D3EE" stroke-width="1" opacity="0.25"/>
+  
+  <!-- Hospital Cross Brand -->
+  <g transform="translate(36, 75)">
+    <rect width="28" height="28" rx="6" fill="#0284C7" filter="url(#cyberGlow)"/>
+    <path d="M14 8 L14 20 M8 14 L20 14" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="36" y="18" fill="#EAF2FF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12">CARE HMS</text>
+  </g>
+
+  <!-- Nav Links Mock -->
+  <rect x="36" y="120" width="98" height="18" rx="4" fill="#3B82F6" opacity="0.3"/>
+  <circle cx="45" cy="129" r="3" fill="#22D3EE"/>
+  <rect x="54" y="126" width="60" height="6" rx="3" fill="#A5F3FC"/>
+
+  <rect x="36" y="148" width="98" height="18" rx="4" fill="#14264E" opacity="0.6"/>
+  <rect x="54" y="154" width="50" height="6" rx="3" fill="#64748B"/>
+
+  <rect x="36" y="176" width="98" height="18" rx="4" fill="#14264E" opacity="0.6"/>
+  <rect x="54" y="182" width="65" height="6" rx="3" fill="#64748B"/>
+
+  <rect x="36" y="204" width="98" height="18" rx="4" fill="#14264E" opacity="0.6"/>
+  <rect x="54" y="210" width="45" height="6" rx="3" fill="#64748B"/>
+
+  <!-- Main Content Dashboard Area -->
+  <!-- Stat Card 1: Active Patients -->
+  <g transform="translate(165, 60)">
+    <rect width="130" height="74" rx="10" fill="url(#cardGrad)" stroke="#22D3EE" stroke-width="1" opacity="0.35"/>
+    <text x="14" y="24" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Active Patients</text>
+    <text x="14" y="52" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="22">1,248</text>
+    <circle cx="106" cy="38" r="14" fill="rgba(34, 211, 238, 0.15)"/>
+    <path d="M102 38 L106 34 L110 38" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Stat Card 2: Doctors on Duty -->
+  <g transform="translate(305, 60)">
+    <rect width="130" height="74" rx="10" fill="url(#cardGrad)" stroke="#3B82F6" stroke-width="1" opacity="0.35"/>
+    <text x="14" y="24" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Doctors on Duty</text>
+    <text x="14" y="52" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="22">64</text>
+    <circle cx="106" cy="38" r="14" fill="rgba(59, 130, 246, 0.15)"/>
+    <path d="M102 38 L106 42 L110 38" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Stat Card 3: Bed Occupancy -->
+  <g transform="translate(445, 60)">
+    <rect width="135" height="74" rx="10" fill="url(#cardGrad)" stroke="#22D3EE" stroke-width="1" opacity="0.35"/>
+    <text x="14" y="24" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Bed Occupancy</text>
+    <text x="14" y="52" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="22">87%</text>
+    <circle cx="110" cy="38" r="14" fill="rgba(34, 211, 238, 0.15)"/>
+    <circle cx="110" cy="38" r="8" fill="none" stroke="#22D3EE" stroke-width="2"/>
+  </g>
+
+  <!-- Central Chart Visualization Mockup -->
+  <g transform="translate(165, 148)">
+    <rect width="415" height="135" rx="10" fill="url(#cardGrad)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1"/>
+    <text x="18" y="26" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12">Patient Admissions Trends (Monthly)</text>
+    
+    <!-- Grid Lines -->
+    <line x1="20" y1="45" x2="395" y2="45" stroke="#10234B" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="20" y1="75" x2="395" y2="75" stroke="#10234B" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="20" y1="105" x2="395" y2="105" stroke="#10234B" stroke-width="1" stroke-dasharray="4 4"/>
+
+    <!-- Wave Graphic / ECG Pulse Line -->
+    <path d="M 25 100 Q 60 40 95 70 T 165 50 T 235 85 T 305 45 T 375 65" 
+          fill="none" stroke="url(#cyberAccent)" stroke-width="3" filter="url(#cyberGlow)"/>
+          
+    <!-- Spark Area under curve -->
+    <path d="M 25 100 Q 60 40 95 70 T 165 50 T 235 85 T 305 45 T 375 65 L 375 115 L 25 115 Z" 
+          fill="url(#cyberAccent)" opacity="0.12"/>
+          
+    <circle cx="305" cy="45" r="4" fill="#FFFFFF" stroke="#22D3EE" stroke-width="2"/>
+  </g>
+
+  <!-- Lower Status Banner -->
+  <g transform="translate(165, 295)">
+    <rect width="415" height="45" rx="8" fill="#0A1630" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1"/>
+    <circle cx="25" cy="22" r="5" fill="#22D3EE"/>
+    <text x="38" y="26" fill="#A9BCD6" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">System Architecture Mockup — Hospital Management System</text>
+    <rect x="325" y="12" width="75" height="22" rx="11" fill="rgba(34, 211, 238, 0.2)" stroke="#22D3EE" stroke-width="1"/>
+    <text x="362" y="27" fill="#22D3EE" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" text-anchor="middle">ACTIVE</text>
+  </g>
+</svg>

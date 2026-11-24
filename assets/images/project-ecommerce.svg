@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradEcom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1630" />
+      <stop offset="100%" stop-color="#050B1A" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="prodCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2044" />
+      <stop offset="100%" stop-color="#0A1630" />
+    </linearGradient>
+    <filter id="neonCyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="360" rx="16" fill="url(#bgGradEcom)"/>
+  <rect width="598" height="358" x="1" y="1" rx="15" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.3"/>
+
+  <!-- Top App / Browser Bar -->
+  <path d="M0 16 C0 7.16 7.16 0 16 0 L584 0 C592.84 0 600 7.16 600 16 L600 44 L0 44 Z" fill="#0E1D3D" />
+  <circle cx="24" cy="22" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="40" cy="22" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="56" cy="22" r="5" fill="#10B981" opacity="0.8"/>
+  
+  <!-- Search / URL Bar -->
+  <rect x="180" y="12" width="240" height="20" rx="10" fill="#050B1A" stroke="#22D3EE" stroke-width="1" opacity="0.4"/>
+  <text x="300" y="26" fill="#22D3EE" font-family="'Plus Jakarta Sans', monospace, sans-serif" font-size="10" text-anchor="middle">store.cybermarket.io/shop</text>
+
+  <!-- Store Header Strip -->
+  <g transform="translate(30, 56)">
+    <!-- Brand -->
+    <text x="0" y="22" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="18" letter-spacing="1">CYBER<tspan fill="#22D3EE">STORE</tspan></text>
+    
+    <!-- Navigation Pill Mockups -->
+    <rect x="150" y="8" width="55" height="18" rx="9" fill="rgba(34, 211, 238, 0.2)" stroke="#22D3EE" stroke-width="1"/>
+    <text x="177" y="21" fill="#22D3EE" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">All Tech</text>
+
+    <text x="235" y="21" fill="#A9BCD6" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Laptops</text>
+    <text x="295" y="21" fill="#A9BCD6" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Audio</text>
+    <text x="350" y="21" fill="#A9BCD6" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Deals</text>
+
+    <!-- Cart Badge Right -->
+    <g transform="translate(485, 4)">
+      <rect width="55" height="26" rx="13" fill="#0F2044" stroke="#22D3EE" stroke-width="1"/>
+      <path d="M12 18 L16 8 L32 8 L34 18 Z" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-linejoin="round"/>
+      <circle cx="17" cy="21" r="1.5" fill="#22D3EE"/>
+      <circle cx="29" cy="21" r="1.5" fill="#22D3EE"/>
+      <text x="42" y="17" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10">3</text>
+    </g>
+  </g>
+
+  <!-- Hero Promo Banner Card -->
+  <g transform="translate(30, 96)">
+    <rect width="540" height="88" rx="12" fill="url(#prodCardGrad)" stroke="rgba(34, 211, 238, 0.3)" stroke-width="1"/>
+    <text x="24" y="32" fill="#22D3EE" font-family="'Plus Jakarta Sans', monospace, sans-serif" font-size="9" letter-spacing="1">NEW CYBER SEASON 2026</text>
+    <text x="24" y="58" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="20">Next-Gen Digital Experience</text>
+    
+    <!-- CTA Button -->
+    <rect x="24" y="66" width="90" height="18" rx="9" fill="url(#cyanGrad)"/>
+    <text x="69" y="79" fill="#050B1A" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" text-anchor="middle">Explore Now &#8594;</text>
+
+    <!-- Visual Glow Orb Right inside Banner -->
+    <circle cx="480" cy="44" r="32" fill="rgba(34, 211, 238, 0.15)" filter="url(#neonCyanGlow)"/>
+    <polygon points="460,28 500,44 460,60" fill="none" stroke="#22D3EE" stroke-width="2"/>
+  </g>
+
+  <!-- Product Grid (3 Cards) -->
+  <!-- Product 1 -->
+  <g transform="translate(30, 198)">
+    <rect width="168" height="142" rx="10" fill="url(#prodCardGrad)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1"/>
+    <!-- Mock Product Image Area -->
+    <rect x="10" y="10" width="148" height="64" rx="6" fill="#0A1630"/>
+    <circle cx="84" cy="42" r="20" fill="rgba(34, 211, 238, 0.15)"/>
+    <path d="M72 42 C72 32 96 32 96 42" stroke="#22D3EE" stroke-width="2.5" fill="none"/>
+    <rect x="68" y="40" width="8" height="12" rx="2" fill="#3B82F6"/>
+    <rect x="92" y="40" width="8" height="12" rx="2" fill="#3B82F6"/>
+
+    <text x="12" y="90" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11">Wireless Pro ANC</text>
+    <text x="12" y="105" fill="#64748B" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">Audio Gear</text>
+    <text x="12" y="128" fill="#22D3EE" font-family="'Outfit', sans-serif" font-weight="700" font-size="14">$149.00</text>
+    
+    <rect x="126" y="112" width="28" height="22" rx="6" fill="#0284C7"/>
+    <text x="140" y="127" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 2 -->
+  <g transform="translate(216, 198)">
+    <rect width="168" height="142" rx="10" fill="url(#prodCardGrad)" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1"/>
+    <rect x="10" y="10" width="148" height="64" rx="6" fill="#0A1630"/>
+    <rect x="58" y="24" width="52" height="34" rx="4" fill="none" stroke="#3B82F6" stroke-width="2"/>
+    <line x1="52" y1="58" x2="116" y2="58" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+
+    <text x="12" y="90" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11">Ultra Ultrabook 14"</text>
+    <text x="12" y="105" fill="#64748B" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">Computing</text>
+    <text x="12" y="128" fill="#22D3EE" font-family="'Outfit', sans-serif" font-weight="700" font-size="14">$899.00</text>
+    
+    <rect x="126" y="112" width="28" height="22" rx="6" fill="#0284C7"/>
+    <text x="140" y="127" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 3 -->
+  <g transform="translate(402, 198)">
+    <rect width="168" height="142" rx="10" fill="url(#prodCardGrad)" stroke="rgba(34, 211, 238, 0.25)" stroke-width="1"/>
+    <rect x="10" y="10" width="148" height="64" rx="6" fill="#0A1630"/>
+    <circle cx="84" cy="42" r="16" fill="none" stroke="#22D3EE" stroke-width="2.5"/>
+    <rect x="80" y="20" width="8" height="6" rx="2" fill="#3B82F6"/>
+    <rect x="80" y="58" width="8" height="6" rx="2" fill="#3B82F6"/>
+
+    <text x="12" y="90" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11">Smart Watch OLED</text>
+    <text x="12" y="105" fill="#64748B" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">Wearables</text>
+    <text x="12" y="128" fill="#22D3EE" font-family="'Outfit', sans-serif" font-weight="700" font-size="14">$219.00</text>
+    
+    <rect x="126" y="112" width="28" height="22" rx="6" fill="#0284C7"/>
+    <text x="140" y="127" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" text-anchor="middle">+</text>
+  </g>
+</svg>
